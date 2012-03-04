@@ -197,7 +197,7 @@
     <!-- Statusbar | Battery -->
     <string name="battery_icon">배터리 아이콘 스타일 </string>
     <string name="battery_summary_text_widget">@null</string>
-    <string name="battery_bar">배터리 막대</string>
+    <string name="battery_bar">배터리 막대 표시</string>
     <string name="battery_bar_color">배터리 막대 색상</string>
     <string name="battery_bar_cat">배터리 막대 설정</string>
     <string name="battery_bar_style_title">배터리 막대 스타일</string>
