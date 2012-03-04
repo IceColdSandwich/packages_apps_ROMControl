@@ -18,7 +18,7 @@
     <string name="nav_bar">Navigation bar</string>
     <string name="tools">도구</string>
     <string name="weather">날씨</string>
-    <string name="signal">신호 안테나</string>
+    <string name="signal">신호 강도</string>
     
     <string name="header_summary_battery">배터리 막대, 1% 배터리 모드, 기타</string>
     <string name="header_summary_general_ui">부트 애니메이션, CRT 효과, 화면 회전, 키보드 선택기, 기타</string>
@@ -29,7 +29,7 @@
     <string name="header_summary_led">안드로이드 기본 설정 변경</string>
     <string name="header_summary_general">상태표시줄 동작 관련</string>
     <string name="header_summary_toggles">토글 스위치 설정</string>
-	<string name="header_summary_clock">시계 위치, 오전/오후 스타일, 색상 변경</string>
+	<string name="header_summary_clock">표시 위치, 오전/오후 스타일, 색상 변경</string>
 	<string name="header_summary_weather">스타일, 날씨를 받아올 지역 설정, 갱신 주기</string>
 	<string name="header_summary_signal">신호 강도를 dBm 단위로 표시</string>
 	
@@ -207,7 +207,7 @@
     
 
     <!-- Statusbar | Clock -->
-    <string name="clock_title_enable">시계 스타일</string>
+    <string name="clock_title_enable">시계 위치</string>
     <string name="title_clock_ampm_entries">오전/오후 스타일</string>
     <string name="colors">색상</string>
     <string name="clock_color_title">시계 색상</string>
@@ -224,12 +224,12 @@
     
     <string name="enabled_toggles_title">사용중인 토글 스위치</string>
     <string name="enabled_toggles_summary">화면에 표시할 토글 스위치 선택</string>
-    <string name="toggles_order_title">토글 스위치 순서</string>
+    <string name="toggles_order_title">토글 스위치 정렬</string>
     <string name="toggles_order_summary">화면에 표시된 토글 스위치의 순서 변경</string>
     <string name="brightness_location_title">밝기 조절 위치</string>
 
 	<!-- Statusbar | Signal -->
-	<string name="signal_style">신호 강도 아이콘 스타일</string>
+	<string name="signal_style">표시 방식</string>
 	<string name="signal_color_title">신호 강도 텍스트 색상</string>
 	<string name="hide_signal_title">Hide signal bars</string>
 	<string name="hide_signal_summary">Will also hide data indicator for now. Will be able to separate later.</string>
@@ -277,7 +277,7 @@
 
 	<!-- Preference Titles -->
 	<!-- Main -->
-	<string name="pt_performance">Performance</string>
+	<string name="pt_performance">성능</string>
 	<string name="pt_customization">Customization</string>
 	<string name="pt_tools">도구</string>
 	<string name="pt_mod_version">Mod version</string>
@@ -351,12 +351,12 @@
 	<string name="ps_enable_sysctl">Enable sysctl tweaks on boot</string>
 	<string name="ps_enable_cron">Enable scheduled cron jobs</string>
 	<!-- CPU -->
-	<string name="ps_set_max">Set max CPU scaling frequency\nCurrent: %s</string>
-	<string name="ps_set_min">Set min CPU scaling frequency\nCurrent: %s</string>
-	<string name="ps_set_gov">Set current scaling governor\nCurrent: %s</string>
-	<string name="ps_cpu_boot">Apply CPU at boot</string>
+	<string name="ps_set_max">CPU 최대 클럭\현재: %s</string>
+	<string name="ps_set_min">CPU 최소 클럭\n현재: %s</string>
+	<string name="ps_set_gov">가변 정책 변경\n현재: %s</string>
+	<string name="ps_cpu_boot">부팅시 자동 적용</string>
 	<!-- Performance -->
-	<string name="ps_set_cpu_activity">Set min/max frequencies and scaling governor
+	<string name="ps_set_cpu_activity">최소/최대 CPU 클럭과 정책 설정
 	</string>
 	<string name="ps_free_memory">Amount of RAM the minfree taskkiller will keep |
 		Current: %s</string>
