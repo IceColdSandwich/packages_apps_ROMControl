@@ -214,7 +214,9 @@
     <string name="reset_color_title">Reset color</string>
     <string name="enable_alarm_title">알람 아이콘 표시</string>
     <string name="enable_alarm_summary">변경된 설정을 적용하려면 알람을 껏다 켜거나 시스템을 재시작해야 합니다.</string>
-
+    <string name="enable_clock_weekday">요일 표시k</string>
+    <string name="enable_clock_weekday_summary">시간 앞에 요일을 표시</string>
+    
     <!-- Statusbar | Toggles -->
     <string name="toggle_style_title">토글 스타일</string>
     <string name="toggle_style_summary">토글 스위치를 아이콘 또는 텍스트로 표시</string>
