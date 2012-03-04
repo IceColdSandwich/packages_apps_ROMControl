@@ -186,6 +186,36 @@
 		<item>3</item>
 	</string-array>
 
+	<string-array name="statusbar_transparency_entries">
+		<item>불투명</item>
+		<item>25%</item>
+		<item>50%</item>
+		<item>75%</item>
+		<item>완전투명</item>
+	</string-array>
+
+	<string-array name="statusbar_transparency_values">
+		<item>100</item>
+		<item>75</item>
+		<item>50</item>
+		<item>25</item>
+		<item>0</item>
+	</string-array>
+
+	<string-array name="statusbar_layout_entries">
+		<item>기본</item>
+		<item>반전</item>
+		<!-- <item>Tabs</item>
+		<item>Bottom Tabs</item> -->
+	</string-array>
+
+	<string-array name="statusbar_layout_values">
+		<item>0</item>
+		<item>1</item>
+		<!-- <item>2</item>
+		<item>3</item> -->
+	</string-array>
+	
 	<!-- clock stuff -->
 	<string-array name="clock_style_entries">
 		<item>우측에 시계 표시</item>
