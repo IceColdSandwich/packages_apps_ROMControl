@@ -305,8 +305,8 @@
 
 	<!-- long press home -->
 	<string-array name="long_press_home_entries">
-		<item>Do nothing</item>
-		<item>Show recents</item>
+		<item>아무 것도 하지않음</item>
+		<item>최근 사용한 앱 표시</item>
 	</string-array>
 
 	<string-array name="long_press_home_values">
@@ -322,8 +322,8 @@
 
         <string-array name="pref_lockscreen_options_entries">
 		<item>기본</item>
-		<item>Quad</item>
-        <item>Octo</item>
+		<item>4개</item>
+        <item>8개</item>
 	</string-array>
 
 	<string-array name="minfree">
@@ -414,7 +414,7 @@
 		<item>GPS</item>
 		<item>WIFI</item>
 		<item>Data</item>
-		<item>비행모드</item>
+		<item>비행기</item>
 		<item>진동</item>
 		<item>무음</item>
 		<item>손전등</item>
@@ -427,7 +427,7 @@
 		<item>GPS</item>
 		<item>Wi-Fi</item>
 		<item>Data</item>
-		<item>비행모드</item>
+		<item>비행기 모드</item>
 		<item>진동</item>
 		<item>무음</item>
 		<item>손전등</item>
@@ -455,10 +455,10 @@
 	</string-array>
 	
 	<string-array name="glow_times_entries">
-		<item>Off</item>
-		<item>Super quick</item>
-		<item>Quick</item>
-		<item>Normal</item>
+		<item>끄기</item>
+		<item>매우 빠름</item>
+		<item>빠름</item>
+		<item>보통</item>
 	</string-array>
 
 	<string-array name="glow_times_values">
@@ -478,7 +478,7 @@
 		<item>220</item>
 		<item>230</item>
 		<item>240</item>
-		<item>custom</item>
+		<item>직접 입력</item>
 	</string-array>
 	
 	<string-array name="weather_interval_entries">
