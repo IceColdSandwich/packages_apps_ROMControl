@@ -422,8 +422,8 @@
 	</string-array>
 	
 	<string-array name="available_toggles_values">
-		<item>회전</item>
-		<item>BT</item>
+		<item>자동 화면 회전</item>
+		<item>블루투스</item>
 		<item>GPS</item>
 		<item>Wi-Fi</item>
 		<item>Data</item>
