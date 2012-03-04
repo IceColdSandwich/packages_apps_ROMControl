@@ -4,14 +4,14 @@
 
     <!-- Main -->
     <string name="user_interface">사용자 인터페이스</string>
-    <string name="general_ui">General UI</string>
+    <string name="general_ui">UI 일반</string>
     <string name="lockscreen_options">잠금해제 옵션</string>
     <string name="power_menu_optons">전원버튼 옵션</string>
     <string name="functionality">기능</string>
     <string name="power_saver">절전 모드</string>
     <string name="led_options">LED options</string>
     <string name="statusbar">상태표시줄</string>
-    <string name="general">일반</string>
+    <string name="general">일반 설정</string>
     <string name="toggles_layout">토글 스위치</string>
     <string name="clock">시계</string>
     <string name="battery">배터리</string>
@@ -22,11 +22,11 @@
     
     <string name="header_summary_battery">배터리 막대, 1% 배터림 모드, 기타</string>
     <string name="header_summary_general_ui">부트 애니메이션, CRT 효과, 화면 회전, 키보드 선택기, 기타</string>
-    <string name="header_summary_navigation_bar">Buttons to display, nav bar color, order</string>
+    <string name="header_summary_navigation_bar">표시할 버튼, nav bar 색상, 정렬 순서</string>
     <string name="header_summary_lockscreens">잠금화면 단축 아이콘 설정, 레이아웃</string>
     <string name="header_summary_power_menu">전원버튼을 길게 눌렀을 때 표시할 메뉴</string>
     <string name="header_summary_powersaver">배터리를 절약하기 위해 자동으로 데이터 차단</string>
-    <string name="header_summary_led">Change default settings for Android to use</string>
+    <string name="header_summary_led">안드로이드 기본 설정 변경</string>
     <string name="header_summary_general">상태표시줄 동작 관련</string>
     <string name="header_summary_toggles">토글 스위치 설정</string>
 	<string name="header_summary_clock">시계 위치, 오전/오후 스타일, 색상 변경</string>
@@ -86,8 +86,8 @@
 	
 	<!-- CRT animations -->
 	<string name="crt_animations_header">CRT 애니메이션</string>
-	<string name="crt_on_title">CRT on 애니메이션</string>
-	<string name="crt_off_title">CRT off 애니메이션</string>
+	<string name="crt_on_title">CRT on 사용</string>
+	<string name="crt_off_title">CRT off 사용</string>
 	
 	<!-- LCD Density -->
 	<string name="lcd_density_wizard">LCD Density 마법사</string>
@@ -321,11 +321,11 @@
 
 	<!-- Preference Summaries -->
 	<!-- Main -->
-	<string name="ps_performance">Set CPU, free memory &amp; customize start-up
+	<string name="ps_performance">오버클럭, 메모리 설정, customize start-up
 		settings.</string>
-	<string name="ps_customization">Customize the lockscreen &amp; status bar. Install
+	<string name="ps_customization">잠금 화면 &amp; 상태표시줄. Install
 		blur/aosp apps with Liberty Customizer</string>
-	<string name="ps_tools">Various system tools</string>
+	<string name="ps_tools">기타 시스템 도구</string>
 	<!-- Customization -->
 	<string name="ps_liberty_customizer">Customize the ROM to your liking</string>
 	<string name="ps_lockscreen">Change lockscreen styles and manage widgets
