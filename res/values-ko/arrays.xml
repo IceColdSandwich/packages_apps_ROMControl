@@ -357,8 +357,8 @@
         </string-array>
 	
 	<string-array name="battery_icon_entries">
-		<item>아이콘만 표시</item>
-		<item>숫자만 표시</item>
+		<item>기본 아이콘</item>
+		<item>숫자로 표시</item>
 		<item>아이콘과 숫자 표시</item>
 		<item>숫자 크기를 아이콘에 맞춤</item>
 		<item>CircleMOD</item>
@@ -436,7 +436,7 @@
 	
 	<string-array name="lockscreen_choice_entries">
 		<item>잠금해제</item>
-		<item>매너 모드</item>
+		<item>매너모드</item>
 		<item>휴대전화</item>
 		<item>카메라</item>
 		<item>메시지</item>
@@ -446,8 +446,8 @@
 	
 	<string-array name="lockscreen_choice_values">
 		<item>**잠금해제**</item>
-		<item>**매너 모드**</item>
-		<item>**휴대 전화**</item>
+		<item>**매너모드**</item>
+		<item>**휴대전화**</item>
 		<item>**카메라**</item>
 		<item>**메시지**</item>
 		<item>**커스텀 앱**</item>
@@ -482,7 +482,7 @@
 	</string-array>
 	
 	<string-array name="weather_interval_entries">
-		<item>Off</item>
+		<item>자동 갱신 안함</item>
 		<item>1 분</item>
 		<item>5 분</item>
 		<item>10 분</item>
@@ -524,9 +524,9 @@
 	</string-array>
 	
 	<string-array name="signal_style_entries">
-		<item>안테나 아이콘 표시</item>
-		<item>수신 강도를 숫자로 표시</item>
-		<item>w/dBm 단위 표시</item>
+		<item>아이콘으로 표시</item>
+		<item>숫자만 표시</item>
+		<item>w/dBm 단위 같이 표시</item>
 	</string-array>
 
 	<string-array name="signal_style_values">
