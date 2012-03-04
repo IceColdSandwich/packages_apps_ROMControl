@@ -9,7 +9,7 @@
     <string name="power_menu_optons">전원버튼 옵션</string>
     <string name="functionality">기능</string>
     <string name="power_saver">절전 모드</string>
-    <string name="led_options">LED options</string>
+    <string name="led_options">LED 설정</string>
     <string name="statusbar">상태표시줄</string>
     <string name="general">일반 설정</string>
     <string name="toggles_layout">토글 스위치</string>
