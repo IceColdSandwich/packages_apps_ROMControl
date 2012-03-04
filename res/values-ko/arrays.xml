@@ -241,6 +241,18 @@
 		<item>0</item>
 	</string-array>
 
+	<string-array name="clock_weekday_entries">
+		<item>표시안함</item>
+		<item>작게 표시</item>
+		<item>크게 표시</item>
+	</string-array>
+
+	<string-array name="clock_weekday_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+
 	<!-- Toggles -->
 
 	<string-array name="brightness_location_entries">
