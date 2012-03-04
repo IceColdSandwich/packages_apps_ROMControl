@@ -26,7 +26,7 @@
     <string name="header_summary_lockscreens">잠금화면 단축 아이콘 설정, 레이아웃</string>
     <string name="header_summary_power_menu">전원버튼을 길게 눌렀을 때 표시할 메뉴</string>
     <string name="header_summary_powersaver">배터리를 절약하기 위해 자동으로 데이터 차단</string>
-    <string name="header_summary_led">안드로이드 기본 설정 변경</string>
+    <string name="header_summary_led">Change default settings for Android to use</string>
     <string name="header_summary_general">상태표시줄 동작 관련</string>
     <string name="header_summary_toggles">토글 스위치 설정</string>
 	<string name="header_summary_clock">표시 위치, 오전/오후 스타일, 색상 변경</string>
