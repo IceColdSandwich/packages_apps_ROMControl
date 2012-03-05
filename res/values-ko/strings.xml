@@ -27,7 +27,7 @@
     <string name="header_summary_power_menu">전원버튼을 길게 눌렀을 때 표시할 메뉴</string>
     <string name="header_summary_powersaver">배터리를 절약하기 위해 자동으로 데이터 차단</string>
     <string name="header_summary_led">Change default settings for Android to use</string>
-    <string name="header_summary_general">상태표시줄 동작 관련</string>
+    <string name="header_summary_general">설정 버튼 동작, 투명도 변경, 레이아웃</string>
     <string name="header_summary_toggles">토글 스위치 설정</string>
 	<string name="header_summary_clock">표시 위치, 오전/오후 스타일, 색상 변경</string>
 	<string name="header_summary_weather">스타일, 날씨를 받아올 지역 설정, 갱신 주기</string>
@@ -179,8 +179,8 @@
     <string name="summary_led_screen_on">@null</string>
 
     <!--  Statusbar | General -->
-    <string name="title_settings_behavior">기본 설정 사용</string>
-    <string name="summary_settings_behavior">날짜 옆 설정 아이콘을 터치했을 때 동작. 기본값은 한 번 터치하면 시스템 설정, 길게 누르면 토글 표시 또는 해제.</string>
+    <string name="title_settings_behavior">ICS 기본 설정 버튼</string>
+    <string name="summary_settings_behavior">ICS 기본값은 한 번 터치로 시스템 설정, 길게 눌러 토글 숨김/표시. 체크를 해제하면 반대로 작동합니다.</string>
 
     <string name="title_auto_hide_toggles">토글 스위치 자동 숨김</string>
     <string name="summary_auto_hide_toggles">상태표시줄이 접히면 토글 스위치를 숨김</string>
