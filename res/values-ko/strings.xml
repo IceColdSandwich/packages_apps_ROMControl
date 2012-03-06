@@ -118,6 +118,8 @@
     <string name="summary_pref_lockscreen_menu_unlock">Menu button unlocks PIN lockscreen (requires reboot)</string>
     <string name="title_lockscreen_user_timeout_override">Wait to lock screen</string>
     <string name="summary_lockscreen_user_timeout_override">Use Android\'s timeout setting after you manually turn the screen off. The default behavior is to use the delay only when the screen times out by itself.</string>
+    <string name="show_lock_before_unlock_title">항상 잠금 화면 표시</string>
+    <string name="show_lock_before_unlock_summary">PIN/비밀번호/패턴을 해제하기 전에 잠금 화면을 표시합니다</strin
     <string name="lockscreen_battery_title">항상 배터리 표시</string>
     <string name="lockscreen_battery_summary">충전 중이 아닐 때도 잠금 화면에 배터리 잔여량을 표시</string>
 	<string name="lockscreen_weather_title">잠금 화면에 날씨 표시</string>
