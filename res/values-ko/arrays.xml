@@ -538,10 +538,12 @@
 	<string-array name="weather_statusbar_location_entries">
 		<item>상태표시줄 하단에 표시</item>
 		<item>날씨 패널 사용</item>
+		<item>표시 안함</item>
 	</string-array>
 	
 	<string-array name="weather_statusbar_location_values">
 		<item>0</item>
 		<item>1</item>
+		<item>2</item>
 	</string-array>
 </resources>
