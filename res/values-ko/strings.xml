@@ -355,7 +355,7 @@
 	<string name="ps_enable_sysctl">Enable sysctl tweaks on boot</string>
 	<string name="ps_enable_cron">Enable scheduled cron jobs</string>
 	<!-- CPU -->
-	<string name="ps_set_max">CPU 최대 클럭\현재: %s</string>
+	<string name="ps_set_max">CPU 최대 클럭\n현재: %s</string>
 	<string name="ps_set_min">CPU 최소 클럭\n현재: %s</string>
 	<string name="ps_set_gov">가변 정책 변경\n현재: %s</string>
 	<string name="ps_cpu_boot">부팅시 자동 적용</string>
