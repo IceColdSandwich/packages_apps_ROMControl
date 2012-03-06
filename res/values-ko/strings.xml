@@ -6,7 +6,7 @@
     <string name="user_interface">사용자 인터페이스</string>
     <string name="general_ui">UI 일반</string>
     <string name="lockscreen_options">잠금 화면</string>
-    <string name="power_menu_optons">전원 버튼 메뉴</string>
+    <string name="power_menu_optons">전원 버튼</string>
     <string name="functionality">기능</string>
     <string name="power_saver">절전 모드</string>
     <string name="led_options">LED 설정</string>
