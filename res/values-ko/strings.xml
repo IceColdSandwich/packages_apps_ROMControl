@@ -6,7 +6,7 @@
     <string name="user_interface">사용자 인터페이스</string>
     <string name="general_ui">UI 일반</string>
     <string name="lockscreen_options">잠금 화면</string>
-    <string name="power_menu_optons">전원 버튼 메뉴</string>
+    <string name="power_menu_optons">전원 버튼</string>
     <string name="functionality">기능</string>
     <string name="power_saver">절전 모드</string>
     <string name="led_options">LED 설정</string>
@@ -118,6 +118,8 @@
     <string name="summary_pref_lockscreen_menu_unlock">Menu button unlocks PIN lockscreen (requires reboot)</string>
     <string name="title_lockscreen_user_timeout_override">Wait to lock screen</string>
     <string name="summary_lockscreen_user_timeout_override">Use Android\'s timeout setting after you manually turn the screen off. The default behavior is to use the delay only when the screen times out by itself.</string>
+    <string name="show_lock_before_unlock_title">항상 잠금 화면 표시</string>
+    <string name="show_lock_before_unlock_summary">PIN/비밀번호/패턴을 해제하기 전에 잠금 화면을 표시합니다</strin
     <string name="lockscreen_battery_title">항상 배터리 표시</string>
     <string name="lockscreen_battery_summary">충전 중이 아닐 때도 잠금 화면에 배터리 잔여량을 표시</string>
 	<string name="lockscreen_weather_title">잠금 화면에 날씨 표시</string>
@@ -208,14 +210,14 @@
 
     <!-- Statusbar | Clock -->
     <string name="clock_title_enable">시계 위치</string>
-    <string name="title_clock_ampm_entries">오전/오후 스타일</string>
+    <string name="title_clock_ampm_entries">오전/오후</string>
     <string name="colors">색상</string>
     <string name="clock_color_title">시계 색상</string>
     <string name="reset_color_title">Reset color</string>
     <string name="enable_alarm_title">알람 아이콘 표시</string>
     <string name="enable_alarm_summary">변경된 설정을 적용하려면 알람을 껏다 켜거나 시스템을 재시작해야 합니다.</string>
-    <string name="enable_clock_weekday">요일 표시k</string>
-    <string name="enable_clock_weekday_summary">시간 앞에 요일을 표시</string>
+    <string name="enable_clock_weekday">요일 표시</string>
+    <string name="enable_clock_weekday_summary">시간 앞에 짧게 요일 표시</string>
     
     <!-- Statusbar | Toggles -->
     <string name="toggle_style_title">토글 스타일</string>
@@ -353,7 +355,7 @@
 	<string name="ps_enable_sysctl">Enable sysctl tweaks on boot</string>
 	<string name="ps_enable_cron">Enable scheduled cron jobs</string>
 	<!-- CPU -->
-	<string name="ps_set_max">CPU 최대 클럭\현재: %s</string>
+	<string name="ps_set_max">CPU 최대 클럭\n현재: %s</string>
 	<string name="ps_set_min">CPU 최소 클럭\n현재: %s</string>
 	<string name="ps_set_gov">가변 정책 변경\n현재: %s</string>
 	<string name="ps_cpu_boot">부팅시 자동 적용</string>
