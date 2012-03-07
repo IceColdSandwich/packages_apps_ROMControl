@@ -32,7 +32,7 @@
 	<string name="header_summary_clock">표시 위치, 오전/오후 스타일, 색상 변경</string>
 	<string name="header_summary_weather">스타일, 날씨를 받아올 지역 설정, 갱신 주기</string>
 	<string name="header_summary_signal">신호 강도를 dBm 단위로 표시</string>
-	
+
     <string name="advanced_settings">고급 설정</string>
     <string name="misc_short">기타</string>
     
@@ -69,26 +69,26 @@
 	<string name="custom_carrier_label_title">통신사 레이블 변경</string>
 	<string name="longpress_to_kill_title">뒤로 가기 길게 눌러 종료</string>
 	<string name="longpress_to_kill_summary">뒤로 가기 버튼을 길게 눌러 활성화된 애플리케이션을 종료할 수 있습니다.</string>
-	
+
 	<string name="rotate_180_title">180° 화면 회전 허용</string>
 	<string name="rotate_180_summary">기기에게 물구나무 서기의 자유를!</string>
 
 	<string name="horizontal_recents_task_panel_title">가로 방향 작업 관리자 </string>
 	<string name="horizontal_recents_task_panel_summary">WebOS 스타일의 작업 관리자를 사용합니다. 10초 이후에도 제대로 작동하지 않으면 시스템을 재시작 하세요.</string>
-	
+
 	<string name="disable_bootanimation_title">부트 애니메이션 끄기</string>
 	<string name="disable_bootanimation_summary">AOSP 부트 애니메이션을 대신 사용하여 부팅 속도를 단축합니다.</string>
-	
+
 	<string name="disable_bugmailer_title">Disable bugmailer</string>
 
 	<string name="lcd_density_title">LCD Density</string>
 	<string name="lcd_density_summary">unknown</string>
-	
+
 	<!-- CRT animations -->
 	<string name="crt_animations_header">CRT 애니메이션</string>
 	<string name="crt_on_title">CRT on 애니메이션</string>
 	<string name="crt_off_title">CRT off 애니메이션</string>
-	
+
 	<!-- LCD Density -->
 	<string name="lcd_density_wizard">LCD Density 마법사</string>
 	<string name="follow_through_title">잘 보고 따라하세요!</string>
@@ -103,7 +103,7 @@
 	<string name="open_market_summary">그리고 뒤로 가기를 눌러 다시 여기로 돌아오세요.</string>
 	<string name="custom_density_title">5. 당신이 원하는 값으로 density를 변경하세요!</string>
 	<string name="custom_density_summary">만약 마켓 호환성에 관한 문제를 겪는다면 잘 읽고 다시 처음부터 해보세요.</string>
-	
+
     <!-- Lockscreens -->
     <string name="pref_lockscreen_layout_title">잠금 화면 스타일</string>
     <string name="pref_lockscreen_layout_summary">잠금 화면 스타일을 변경한 뒤 아래로 스크롤 하여 단축 아이콘을 변경하세요.</string>
@@ -154,17 +154,17 @@
     <string name="title_pref_powersaving_pref_mode">절전 모드 켜기</string>
     <string name="summary_pref_powersaving_pref_mode">@null</string>
     
-    <string name="title_pref_powersaving_data_screen_off">Screen off data action</string>
-    <string name="summary_pref_powersaving_data_screen_off">What to do with the data when the screen turns off</string>
+    <string name="title_pref_powersaving_data_screen_off">화면 꺼짐 데이터 정책</string>
+    <string name="summary_pref_powersaving_data_screen_off">화면이 꺼졌을 때 데이터 연결 변경</string>
         
-    <string name="title_pref_powersaving_data_screen_off_delay">Data action delay</string>
-    <string name="summary_pref_powersaving_data_screen_off_delay">How long to wait before applying data action?</string>
+    <string name="title_pref_powersaving_data_screen_off_delay">데이터 연결 지연시간</string>
+    <string name="summary_pref_powersaving_data_screen_off_delay">데이터 연결 요청시 지연시간 설정</string>
 
-    <string name="title_pref_powersaving_sync_screen_off">Sync action</string>
-    <string name="summary_pref_powersaving_sync_screen_off">What to do with your syncage?!</string>
+    <string name="title_pref_powersaving_sync_screen_off">동기화 정책</string>
+    <string name="summary_pref_powersaving_sync_screen_off">동기화 정책 변경</string>
     
-    <string name="title_pref_powersaving_sync_screen_off_delay">Sync time interval</string>
-    <string name="summary_pref_powersaving_sync_screen_off_delay">How long to wait between each forced sync</string>
+    <string name="title_pref_powersaving_sync_screen_off_delay">동기화 주기</string>
+    <string name="summary_pref_powersaving_sync_screen_off_delay">각 동기화 간 시간 간격</string>
     
     <string name="powersaver_data_cat">데이터</string>
     <string name="powersaver_sync_cat">동기화</string>
@@ -223,6 +223,7 @@
 
     <string name="alternate_button_layout_title">예전 방식 토글 사용</string>
     <string name="alternate_button_layout_summary">스위치 방식이 아닌 버튼 방식을 사용합니다.</string>
+    <string name="toggle_reset">토글 초기화</string>
     
     <string name="enabled_toggles_title">사용 중인 토글 스위치</string>
     <string name="enabled_toggles_summary">화면에 표시할 토글 스위치 선택</string>
@@ -251,7 +252,7 @@
 	<string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
 	<string name="select_custom_app_title">Select custom application</string>
 	<string name="group_applications">Applications</string>
-	
+
 	<!-- Weather -->
 	<string name="weather_enable">날씨 정보 표시하기</string>
 	<string name="weather_enable_summary">상태표시줄 또는 잠금화면에 날씨 정보를 표시하려면 체크하세요.</string>
@@ -266,7 +267,7 @@
 	<string name="weather_use_celcius">미터법 사용</string>
 	<string name="weather_use_celcius_summary">화씨가 아닌 섭씨 단위로 온도를 표시하며 풍속을 표시할 때 mph 대신 km/h 단위 사용</string>
 	<string name="weather_statusbar_style">스타일</string>
-	
+
 	<!-- Dialog Titles -->
 	<string name="dt_free_memory">Minfree Taskkiller</string>
 
@@ -377,6 +378,11 @@
 	<string name="error_values">Error getting values</string>
 	<string name="set_boot">Set On Boot</string>
 	<string name="apply_values">Apply Values</string>
-	
+
 	<string name="dpi">DPI</string>
+
+	<!-- For translate strings -->
+	<string name="screen_off_wifi_action_text">화면이 꺼졌을 때 Wi-Fi 정책</string>
+	<string name="sync_data_mode_text">데이터 사용량 동기화</string>
+	<string name="sync_data_mobile_mode_text">데이터 동기화 우선순위</string>
 </resources>
