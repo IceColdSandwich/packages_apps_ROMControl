@@ -363,6 +363,11 @@
 		<item>숫자 크기를 아이콘에 맞춤</item>
 		<item>CircleMOD</item>
 		<item>숨김</item>
+		<item>Circle Battery</item>
+		<item>Gummy Bar Battery</item>
+		<item>Honeycomb style</item>
+		<item>GenX style</item>
+		<item>Hide Battery</item>
 	</string-array>
 
 	<string-array name="battery_icon_values">
@@ -538,10 +543,12 @@
 	<string-array name="weather_statusbar_location_entries">
 		<item>상태표시줄 하단에 표시</item>
 		<item>날씨 패널 사용</item>
-	</string-array>
+		<item>표시 안함</item>
+    </string-array>
 	
 	<string-array name="weather_statusbar_location_values">
 		<item>0</item>
 		<item>1</item>
+		<item>2</item>
 	</string-array>
 </resources>
