@@ -61,7 +61,7 @@
     
     <!-- UI -->
     <string name="rotation_animation_delay_title">Ritardo nella rotazione</string>
-    <string name="rotation_animation_delay_summary">Quanti millisecondi devono passare in una posizione per compiere la rotazione schermode. 200 ms di default.</string>
+    <string name="rotation_animation_delay_summary">Quanti millisecondi devono passare in una posizione per compiere la rotazione schermo. 200 ms di default.</string>
 
 	<string name="ime_switcher_title">Mostra cambio tastiera</string>
 	<string name="ime_switcher_summary">Nella barra di stato, durante la digitazione (richiede il riavvio)</string>
@@ -70,13 +70,13 @@
 	<string name="longpress_to_kill_title">Tieni premuto per chiudere</string>
 	<string name="longpress_to_kill_summary">Tieni premuto il tasto indietro per chiudere l\'applicazione corrente</string>
 
-	<string name="rotate_180_title">Consenti rotazione 180</string>
+	<string name="rotate_180_title">Consenti rotazione 180\°</string>
 	<string name="rotate_180_summary">Consenti la rotazione dello schermo sottosopra!</string>
 
 	<string name="horizontal_recents_task_panel_title">Ultimi programmi orizzontale</string>
 	<string name="horizontal_recents_task_panel_summary">Usa lo stile WebOS per il task switcher. La tua UI si riavviera\' dopo il cambiamento. Dovrebbe riapparire dopo 10 secondi. Se non succede riavvia.</string>
 
-	<string name="disable_bootanimation_title">Disattiva animazione di boot</string>
+	<string name="disable_bootanimation_title">Disattiva animazione boot</string>
 	<string name="disable_bootanimation_summary">Avvio rapido con AOSP Android Anim</string>
 
 	<string name="disable_bugmailer_title">Disattiva bugmailer</string>
@@ -86,8 +86,8 @@
 
 	<!-- CRT animations -->
 	<string name="crt_animations_header">Animazione CRT</string>
-	<string name="crt_on_title">CRT acceso</string>
-	<string name="crt_off_title">CRT spento</string>
+	<string name="crt_on_title">CRT</string>
+	<string name="crt_off_title">CRT</string>
 
 	<!-- LCD Density -->
 	<string name="lcd_density_wizard">LCD Density Wizard</string>
@@ -118,6 +118,8 @@
     <string name="summary_pref_lockscreen_menu_unlock">Lockscreen con PIN (richiede riavvio)</string>
     <string name="title_lockscreen_user_timeout_override">Attesa Lockscreen</string>
     <string name="summary_lockscreen_user_timeout_override">Usa il tempo di default di Android per bloccare lo schermo premendo l\'apposito tasto. Il comportamento di default e\' usare il ritardo solo quando lo schermo si spegne da solo.</string>
+    <string name="show_lock_before_unlock_title">Mostra lockscreen prima di sbloccare</string>
+    <string name="show_lock_before_unlock_summary">Mostra standard lockscreen prima dello sblocco con PIN</string>
     <string name="lockscreen_battery_title">Percentuale batteria</string>
     <string name="lockscreen_battery_summary">Mostra sempre la percentuale batteria nel Lockscreen</string>
 	<string name="lockscreen_weather_title">Meteo</string>
@@ -177,6 +179,8 @@
     <string name="led_color_title">Colore LED</string>
     <string name="title_led_screen_on">Lampeggio LED con schermo acceso</string>
     <string name="summary_led_screen_on">@null</string>
+    <string name="title_use_bln">Usa BLN</string>
+    <string name="summary_use_bln"><b>B</b>utton<b>L</b>ight<b>N</b>otification, accende i softkeys con una nuova notifica; leggero consumo in più in standby</string>
 
     <!--  Statusbar | General -->
     <string name="title_settings_behavior">Usa impostazioni di default</string>
@@ -197,7 +201,7 @@
     <!-- Statusbar | Battery -->
     <string name="battery_icon">Stile icona batteria</string>
     <string name="battery_summary_text_widget">@null</string>
-    <string name="battery_bar">Icona batteria</string>
+    <string name="battery_bar">Barra batteria</string>
     <string name="battery_bar_color">Colore barra batteria</string>
     <string name="battery_bar_cat">Opzioni barra batteria</string>
     <string name="battery_bar_style_title">Stile barra batteria</string>
@@ -220,9 +224,10 @@
     <!-- Statusbar | Toggles -->
     <string name="toggle_style_title">Stile interruttori</string>
     <string name="toggle_style_summary">Scegli se visualizzare le icone o il testo delle impostazioni rapide.</string>
-
+    <string name="toggle_reset">Azzera</string>
+    
     <string name="alternate_button_layout_title">Alterna interruttori</string>
-    <string name="alternate_button_layout_summary">Utilizza l\'interruttore anziche\' il pulsante per modificare.</string>
+    <string name="alternate_button_layout_summary">Utilizza il pulsante anziche\' l\'interruttore per modificare.</string>
     
     <string name="enabled_toggles_title">Attiva interruttori</string>
     <string name="enabled_toggles_summary">Scegli gli interruttori da mostrare</string>
@@ -243,8 +248,8 @@
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#FF000000</string>
-    <string name="set">Imposta</string>
-    <string name="ics_color">!!!</string>
+    <string name="set">OK</string>
+    <string name="ics_color">ICS</string>
     
     <!-- Shortcut picker -->
     <string name="use_custom_app_title">Usa app personalizzata</string>
@@ -272,20 +277,20 @@
 
 	<!-- Preference Categories -->
 	<string name="prefcat_cpu">Set CPU</string>
-	<string name="prefcat_free_memory">Free Memory</string>
+	<string name="prefcat_free_memory">Libera Memoria</string>
 	<string name="pc_tweaks">Tweaks</string>
-	<string name="pc_init_d">Enable/Disable Tweaks</string>
-	<string name="pc_init_d_tweaks">Customize Tweaks</string>
+	<string name="pc_init_d">Abilita/Disabilita Tweaks</string>
+	<string name="pc_init_d_tweaks">Personalizza Tweaks</string>
 
 	<!-- Preference Titles -->
 	<!-- Main -->
 	<string name="pt_performance">Performance</string>
-	<string name="pt_customization">Customization</string>
-	<string name="pt_tools">Tools</string>
-	<string name="pt_mod_version">Mod version</string>
+	<string name="pt_customization">Personalizzazioni</string>
+	<string name="pt_tools">Strumenti</string>
+	<string name="pt_mod_version">Versioni modificate</string>
 	<!-- Customization -->
-	<string name="pt_liberty_customizer">Liberty Customizer</string>
-	<string name="pt_lockscreen">Lockscreen Settings</string>
+	<string name="pt_liberty_customizer">Personalizzatore</string>
+	<string name="pt_lockscreen">Impostazioni Lockscreen</string>
 	<string name="pt_ui_status_bar">Status Bar</string>
 	<string name="pt_pulldown_text">Pulldown Text</string>
 	<string name="pt_theme_manager">Theme Manager</string>
@@ -305,21 +310,21 @@
 	<string name="pt_enable_sysctl">Enable sysctl</string>
 	<string name="pt_enable_cron">Enable scheduled tasks</string>
 	<!-- Performance -->
-	<string name="pt_set_cpu_activity">Set CPU</string>
-	<string name="pt_free_memory">Free memory</string>
-	<string name="pt_free_memory_boot">Set at boot</string>
+	<string name="pt_set_cpu_activity">Imposta CPU</string>
+	<string name="pt_free_memory">Libera memoria</string>
+	<string name="pt_free_memory_boot">Setta al riavvio</string>
 	<!-- Cpu -->
 	<string name="pt_set_max">Max CPU</string>
 	<string name="pt_set_min">Min CPU</string>
 	<string name="pt_set_gov">Scaling governor</string>
-	<string name="pt_cpu_boot">Set at boot</string>
+	<string name="pt_cpu_boot">Setta al riavvio</string>
         <!-- Scrolling Cache -->
         <string name="pref_scrollingcache_title">Scrolling cache</string>
-        <string name="pref_scrollingcache_summary">Scrolling cache may improve scrolling performance at the cost of memory</string>
-        <string name="pref_scrollingcache_force_enable">Force enable</string>
-        <string name="pref_scrollingcache_default_enable">Default enable</string>
-        <string name="pref_scrollingcache_default_disable">Default disable</string>
-        <string name="pref_scrollingcache_force_disable">Force disable</string>
+        <string name="pref_scrollingcache_summary">Scrolling puo\' incrementare le performance a discapito della memoria</string>
+        <string name="pref_scrollingcache_force_enable">Abilitazione forzata</string>
+        <string name="pref_scrollingcache_default_enable">Abilitata di default</string>
+        <string name="pref_scrollingcache_default_disable">Disabilitata di default</string>
+        <string name="pref_scrollingcache_force_disable">Disabilitazione forzata</string>
 
 	<!-- Preference Summaries -->
 	<!-- Main -->
@@ -379,4 +384,8 @@
 	<string name="apply_values">Apply Values</string>
 
 	<string name="dpi">DPI</string>
+	<!-- For translate strings -->
+	<string name="screen_off_wifi_action_text">Azione Wi-Fi a schermo spento</string>
+	<string name="sync_data_mode_text">Sincronizzazione</string>
+	<string name="sync_data_mobile_mode_text">Dati mobili</string>
 </resources>
