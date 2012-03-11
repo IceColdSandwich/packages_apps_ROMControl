@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
 	<string-array name="pref_navigation_menu_entries">
@@ -189,16 +189,22 @@
 	<string-array name="statusbar_transparency_entries">
 		<item>Sans transparence</item>
 		<item>25%</item>
+		<item>33%</item>
 		<item>50%</item>
+		<item>66%</item>
 		<item>75%</item>
+		<item>90%</item>
 		<item>Totalement transparent</item>
 	</string-array>
 
 	<string-array name="statusbar_transparency_values">
 		<item>100</item>
 		<item>75</item>
+		<item>66</item>
 		<item>50</item>
+		<item>33</item>
 		<item>25</item>
+		<item>10</item>
 		<item>0</item>
 	</string-array>
 
@@ -365,7 +371,8 @@
 		<item>Style Gummy Bar</item>
 		<item>Style Honeycomb</item> 
 		<item>Style GenX</item>
-		<item>Masquer</item>
+		<item>Style Cercle BlackIce</item>
+		<item>Masquer la batterie</item>
 	</string-array>
 
 	<string-array name="battery_icon_values">
@@ -378,6 +385,7 @@
 		<item>6</item>
 		<item>7</item>
 		<item>8</item>
+		<item>9</item>
 	</string-array>
 
 	<string-array name="battery_bar_entries">
@@ -414,7 +422,7 @@
 		<item>4</item>
 	</string-array>
 	
-	<string-array name="available_toggles_entries">
+	<string-array name="available_toggles_values">
 		<item>ROTATE</item>
 		<item>BT</item>
 		<item>GPS</item>
@@ -427,7 +435,7 @@
 		<item>SYNC</item>
 	</string-array>
 	
-	<string-array name="available_toggles_values">
+	<string-array name="available_toggles_entries">
 		<item>Rotation automatique</item>
 		<item>BT</item>
 		<item>GPS</item>
