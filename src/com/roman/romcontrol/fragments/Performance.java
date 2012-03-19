@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -41,6 +42,10 @@ public class Performance extends SettingsPreferenceFragment implements
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "1";
 
+    private static final String TILED_RENDERING_PREF = "tiled_rendering";
+    private static final String TILED_RENDERING_PROP = "debug.enabletr";
+    private static final String TILED_RENDERING_DEFAULT = "false";
+
     private String[] ALL_GOV;
     private int[] SPEED_STEPS;
     private ListPreference mMinCpu;
@@ -50,11 +55,14 @@ public class Performance extends SettingsPreferenceFragment implements
     private ListPreference mScrollingCachePref;
     private SharedPreferences preferences;
     private boolean doneLoading = false;
+    private CheckBoxPreference mTiledRenderingPref;
 
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+        PreferenceScreen prefSet = getPreferenceScreen();
 
         super.onCreate(savedInstanceState);
         preferences.registerOnSharedPreferenceChangeListener(this);
@@ -117,6 +125,13 @@ public class Performance extends SettingsPreferenceFragment implements
             ((PreferenceCategory) getPreferenceScreen().findPreference("cpu"))
                     .removePreference(ps);
         }
+
+        String tiledRendering = SystemProperties.get(TILED_RENDERING_PROP, TILED_RENDERING_DEFAULT);
+            if (tiledRendering != null) {
+                mTiledRenderingPref.setChecked("true".equals(tiledRendering));
+            } else {
+                prefSet.removePreference(mTiledRenderingPref);
+            }
 
         doneLoading = true;
     }
@@ -285,6 +300,19 @@ public class Performance extends SettingsPreferenceFragment implements
         }
 
         return false;
+    }
+
+     @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mTiledRenderingPref) {
+            SystemProperties.set(TILED_RENDERING_PROP,
+                    mTiledRenderingPref.isChecked() ? "true" : "false");
+        } else {
+            // If we didn't handle it, let preferences handle it.
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
+        }
+
+        return true;
     }
 
 }
