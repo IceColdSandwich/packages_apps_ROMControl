@@ -103,7 +103,6 @@
 
 	<!-- toggle style -->
 	<string-array name="toggle_style_entries">
-		<item>Kein Icon, kein Text</item>
 		<item>Nur Icon</item>
 		<item>Nur Text</item>
 	</string-array>
