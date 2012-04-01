@@ -60,6 +60,7 @@ public class Lockscreens extends AOKPPreferenceFragment implements
     private static final String TAG = "Lockscreens";
     private static final boolean DEBUG = true;
 
+    private static final String PREF_MENU = "pref_lockscreen_menu_unlock";
     private static final String PREF_USER_OVERRIDE = "lockscreen_user_timeout_override";
     private static final String PREF_LOCKSCREEN_LAYOUT = "pref_lockscreen_layout";
 
@@ -87,6 +88,7 @@ public class Lockscreens extends AOKPPreferenceFragment implements
 
     private static final String WALLPAPER_NAME = "lockscreen_wallpaper.jpg";
 
+    CheckBoxPreference menuButtonLocation;
     CheckBoxPreference mLockScreenTimeoutUserOverride;
     ListPreference mLockscreenOption;
     CheckBoxPreference mVolumeWake;
@@ -125,6 +127,10 @@ public class Lockscreens extends AOKPPreferenceFragment implements
 
         // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.prefs_lockscreens);
+
+        menuButtonLocation = (CheckBoxPreference) findPreference(PREF_MENU);
+        menuButtonLocation.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.LOCKSCREEN_ENABLE_MENU_KEY, 1) == 1);
 
         mLockScreenTimeoutUserOverride = (CheckBoxPreference) findPreference(PREF_USER_OVERRIDE);
         mLockScreenTimeoutUserOverride.setChecked(Settings.Secure.getInt(getActivity()
@@ -222,7 +228,13 @@ public class Lockscreens extends AOKPPreferenceFragment implements
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mLockScreenTimeoutUserOverride) {
+        if (preference == menuButtonLocation) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_ENABLE_MENU_KEY,
+                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+            return true;
+
+        } else if (preference == mLockScreenTimeoutUserOverride) {
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.LOCK_SCREEN_LOCK_USER_OVERRIDE,
                     ((CheckBoxPreference) preference).isChecked() ? 1 : 0);

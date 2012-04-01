@@ -179,7 +179,14 @@
 		<item>10000</item>
 	</string-array>
 
-	<string-array name="pref_navigation_menu_display_values">
+	<string-array name="pref_navigation_menu_display_entries">
+		<item>Default ICS behavior</item>
+		<item>Always show invisible icons</item>
+		<item>Always show</item>
+		<item>Default ICS with invisible icons when hidden</item>
+	</string-array>
+
+	<string-array name="pref_navigation_menu_display_values" translatable="false">
 		<item>0</item>
 		<item>1</item>
 		<item>2</item>
@@ -189,22 +196,16 @@
 	<string-array name="statusbar_transparency_entries">
 		<item>No transparency</item>
 		<item>25%</item>
-		<item>33%</item>
 		<item>50%</item>
-		<item>66%</item>
 		<item>75%</item>
-		<item>90%</item>
 		<item>Full transparency</item>
 	</string-array>
 
 	<string-array name="statusbar_transparency_values" translatable="false">
 		<item>100</item>
 		<item>75</item>
-		<item>66</item>
 		<item>50</item>
-		<item>33</item>
 		<item>25</item>
-		<item>10</item>
 		<item>0</item>
 	</string-array>
 
@@ -223,7 +224,7 @@
 	<!-- clock stuff -->
 	<string-array name="clock_style_entries">
 		<item>Right clock</item>
-		<item>Centered clock</item>
+		<item>Center clock</item>
 		<item>No clock</item>
 	</string-array>
 
@@ -311,11 +312,15 @@
 	<string-array name="long_press_home_entries">
 		<item>Do nothing</item>
 		<item>Show recents</item>
+		<item>Camera</item>
+		<item>Custom app</item>
 	</string-array>
 
 	<string-array name="long_press_home_values" translatable="false">
 		<item>0</item>
 		<item>1</item>
+		<item>2</item>
+		<item>3</item>
 	</string-array>
 
     <string-array name="pref_lockscreen_options_values" translatable="false">
@@ -409,12 +414,8 @@
 		<item>Text only</item>
 		<item>Icon with text</item>
 		<item>Icon with centered text</item>
-		<item>Circle Battery</item>
-		<item>Gummy Bar Battery</item>
-		<item>Honeycomb style</item> 
-		<item>GenX style</item>
-		<item>BlackIce Circle style</item>
-		<item>Hide Battery</item>
+		<item>CircleMOD</item>
+		<item>Hide</item>
 	</string-array>
 
 	<string-array name="battery_icon_values" translatable="false">
@@ -424,20 +425,20 @@
 		<item>3</item>
 		<item>4</item>
 		<item>5</item>
-		<item>6</item>
-		<item>7</item>
-		<item>8</item>
-		<item>9</item>
 	</string-array>
 
 	<string-array name="battery_bar_entries">
 		<item>Hide</item>
-		<item>Show</item>
+		<item>Statusbar</item>
+		<item>Top of navbar</item>
+		<item>Bottom of navbar</item>
 	</string-array>
 	
 	<string-array name="battery_bar_values" translatable="false">
 		<item>0</item>
 		<item>1</item>
+		<item>2</item>
+		<item>3</item>
 	</string-array>
 	
 	<string-array name="battery_bar_style_entries">
@@ -469,13 +470,12 @@
 		<item>BT</item>
 		<item>GPS</item>
 		<item>WIFI</item>
-		<item>DATA</item>
 		<item>AIRPLANE_MODE</item>
 		<item>VIBRATE</item>
 		<item>SILENT</item>
 		<item>TORCH</item>
 		<item>SYNC</item>
-		<item>FCHARGE</item>
+		<item>SWAGGER</item>
 	</string-array>
 	
 	<string-array name="available_toggles_values">
@@ -483,13 +483,12 @@
 		<item>BT</item>
 		<item>GPS</item>
 		<item>Wi-Fi</item>
-		<item>Data</item>
 		<item>Airplane mode</item>
 		<item>Vibrate</item>
 		<item>Silent</item>
 		<item>Torch</item>
 		<item>Sync</item>
-		<item>Fast charge</item>
+		<item>Swagger</item>
 	</string-array>
 	
 	<string-array name="lockscreen_choice_entries">
@@ -528,14 +527,16 @@
 	
 	<string-array name="lcd_density_entries" translatable="false">
 		<item>160</item>
-		<item>170</item>
 		<item>180</item>
-		<item>190</item>
-		<item>200</item>
-		<item>210</item>	
+		<item>200</item>	
 		<item>220</item>
-		<item>230</item>
 		<item>240</item>
+		<item>241</item>
+		<item>260</item>
+		<item>280</item>
+		<item>300</item>
+		<item>320</item>
+		<item>340</item>
 		<item>custom</item>
 	</string-array>
 	
@@ -582,7 +583,7 @@
 	</string-array>
 	
 	<string-array name="signal_style_entries">
-		<item>Show Signal Bars</item>
+		<item>Show signal bars</item>
 		<item>Show Signal Text</item>
 		<item>Show w/dBm</item>
 	</string-array>
@@ -614,5 +615,35 @@
 		<item>1</item>
 		<item>2</item>
 	</string-array>
-
+		
+	<string-array name="navigation_bar_width_entries">
+		<item>42 dp (default)</item>
+		<item>36 dp</item>
+		<item>30 dp</item>
+		<item>24 dp</item>
+	</string-array>
+	
+	<string-array name="navigation_bar_width" translatable="false">
+		<item>42</item>
+		<item>36</item>
+		<item>30</item>
+		<item>24</item>
+	</string-array>
+	
+	<string-array name="navigation_bar_height_entries">
+		<item>48 dp (default)</item>
+		<item>42 dp</item>
+		<item>36 dp</item>
+		<item>30 dp</item>
+		<item>24 dp</item>
+	</string-array>
+	
+	
+	<string-array name="navigation_bar_height" translatable="false">
+		<item>48</item>
+		<item>42</item>
+		<item>36</item>
+		<item>30</item>
+		<item>24</item>
+	</string-array>
 </resources>

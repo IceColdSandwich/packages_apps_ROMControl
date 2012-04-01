@@ -22,13 +22,14 @@ public class StatusBarGeneral extends AOKPPreferenceFragment implements
     private static final String PREF_SETTINGS_BUTTON_BEHAVIOR = "settings_behavior";
     private static final String PREF_AUTO_HIDE_TOGGLES = "auto_hide_toggles";
     private static final String PREF_BRIGHTNESS_TOGGLE = "status_bar_brightness_toggle";
+    private static final String PREF_ADB_ICON = "adb_icon";
     private static final String PREF_TRANSPARENCY = "status_bar_transparency";
     private static final String PREF_LAYOUT = "status_bar_layout";
 
     CheckBoxPreference mDefaultSettingsButtonBehavior;
     CheckBoxPreference mAutoHideToggles;
     CheckBoxPreference mStatusBarBrightnessToggle;
-
+    CheckBoxPreference mAdbIcon;
     ListPreference mTransparency;
     ListPreference mLayout;
 
@@ -57,6 +58,10 @@ public class StatusBarGeneral extends AOKPPreferenceFragment implements
         mStatusBarBrightnessToggle.setChecked(Settings.System.getInt(mContext
                 .getContentResolver(), Settings.System.STATUS_BAR_BRIGHTNESS_TOGGLE,
                 0) == 1);
+
+        mAdbIcon = (CheckBoxPreference) findPreference(PREF_ADB_ICON);
+        mAdbIcon.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
+                Settings.Secure.ADB_ICON, 1) == 1);
         
         mTransparency = (ListPreference) findPreference(PREF_TRANSPARENCY);
         mTransparency.setOnPreferenceChangeListener(this);
@@ -76,8 +81,9 @@ public class StatusBarGeneral extends AOKPPreferenceFragment implements
             prefs.removePreference(mStatusBarBrightnessToggle);
             prefs.removePreference(mAutoHideToggles);
             prefs.removePreference(mDefaultSettingsButtonBehavior);
+            prefs.removePreference(mTransparency);
+            prefs.removePreference(mLayout);
         }
-
     }
 
     @Override
@@ -107,6 +113,13 @@ public class StatusBarGeneral extends AOKPPreferenceFragment implements
                     ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
             return true;
 
+        } else if (preference == mAdbIcon) {
+
+            boolean checked = ((CheckBoxPreference) preference).isChecked();
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.ADB_ICON, checked ? 1 : 0);
+            return true;
+            
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);

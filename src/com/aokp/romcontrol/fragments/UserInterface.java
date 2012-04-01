@@ -36,7 +36,6 @@ public class UserInterface extends AOKPPreferenceFragment implements
     private static final String PREF_IME_SWITCHER = "ime_switcher";
     private static final String PREF_ENABLE_VOLUME_OPTIONS = "enable_volume_options";
     private static final String PREF_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
-    private static final String PREF_LONGPRESS_TO_KILL = "longpress_to_kill";
     private static final String PREF_ROTATION_ANIMATION = "rotation_animation_delay";
     private static final String PREF_180 = "rotate_180";
 
@@ -44,13 +43,13 @@ public class UserInterface extends AOKPPreferenceFragment implements
     CheckBoxPreference mCrtOffAnimation;
     CheckBoxPreference mShowImeSwitcher;
     CheckBoxPreference mEnableVolumeOptions;
-    CheckBoxPreference mLongPressToKill;
     CheckBoxPreference mAllow180Rotation;
     CheckBoxPreference mHorizontalAppSwitcher;
     Preference mCustomLabel;
     ListPreference mAnimationRotationDelay;
     Preference mLcdDensity;
     CheckBoxPreference mDisableBootAnimation;
+    CheckBoxPreference mDisableBugMailer;
 
     String mCustomLabelText = null;
     int newDensityValue;
@@ -84,10 +83,6 @@ public class UserInterface extends AOKPPreferenceFragment implements
         mCustomLabel = findPreference(PREF_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
 
-        mLongPressToKill = (CheckBoxPreference) findPreference(PREF_LONGPRESS_TO_KILL);
-        mLongPressToKill.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
-                Settings.Secure.KILL_APP_LONGPRESS_BACK, 0) == 1);
-
         mAnimationRotationDelay = (ListPreference) findPreference(PREF_ROTATION_ANIMATION);
         mAnimationRotationDelay.setOnPreferenceChangeListener(this);
         mAnimationRotationDelay.setValue(Settings.System.getInt(getActivity()
@@ -118,6 +113,9 @@ public class UserInterface extends AOKPPreferenceFragment implements
         mDisableBootAnimation.setChecked(!new File("/system/media/bootanimation.zip").exists());
         if (mDisableBootAnimation.isChecked())
             mDisableBootAnimation.setSummary(R.string.disable_bootanimation_summary);
+
+        mDisableBugMailer = (CheckBoxPreference) findPreference("disable_bugmailer");
+        mDisableBugMailer.setChecked(!new File("/system/bin/bugmailer.sh").exists());
 
         if (!getResources().getBoolean(com.android.internal.R.bool.config_enableCrtAnimations)) {
             prefs.removePreference((PreferenceGroup) findPreference("crt"));
@@ -197,13 +195,7 @@ public class UserInterface extends AOKPPreferenceFragment implements
             });
 
             alert.show();
-        } else if (preference == mLongPressToKill) {
-
-            boolean checked = ((CheckBoxPreference) preference).isChecked();
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.KILL_APP_LONGPRESS_BACK, checked ? 1 : 0);
-            return true;
-
+            
         } else if (preference == mAllow180Rotation) {
 
             boolean checked = ((CheckBoxPreference) preference).isChecked();
@@ -237,6 +229,20 @@ public class UserInterface extends AOKPPreferenceFragment implements
             }
             return true;
 
+        } else if (preference == mDisableBugMailer) {
+            boolean checked = ((CheckBoxPreference) preference).isChecked();
+            if (checked) {
+                Helpers.getMount("rw");
+                new CMDProcessor().su
+                        .runWaitFor("mv /system/bin/bugmailer.sh /system/bin/bugmailer.sh.unicorn");
+                Helpers.getMount("ro");
+            } else {
+                Helpers.getMount("rw");
+                new CMDProcessor().su
+                        .runWaitFor("mv /system/bin/bugmailer.sh.unicorn /system/bin/bugmailer.sh");
+                Helpers.getMount("ro");
+            }
+            return true;
         } else if (preference == mLcdDensity) {
             ((PreferenceActivity) getActivity())
                     .startPreferenceFragment(new DensityChanger(), true);

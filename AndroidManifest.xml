@@ -78,7 +78,8 @@
             android:label="Init.D" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="com.aokp.romcontrol.SHORTCUT" />
+
+                <category android:name="android.aokp.romcontrol.SHORTCUT" />
             </intent-filter>
         </activity>
         <activity
@@ -129,6 +130,8 @@
             android:label="Navigation Bar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.aokp.romcontrol.SHORTCUT" />
             </intent-filter>
         </activity>
         <activity
