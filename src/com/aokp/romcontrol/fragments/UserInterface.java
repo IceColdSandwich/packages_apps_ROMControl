@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.os.PowerManager;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -43,6 +44,7 @@ public class UserInterface extends AOKPPreferenceFragment implements
     private static final String PREF_HOME_LONGPRESS = "long_press_home";
     private static final String PREF_RECENT_APP_SWITCHER = "recent_app_switcher";
     private static final String PREF_RECENT_KILL_ALL = "recent_kill_all";
+    private static final String PREF_TABLET_MOD = "tablet_mod";
 
     CheckBoxPreference mCrtOnAnimation;
     CheckBoxPreference mCrtOffAnimation;
@@ -56,6 +58,7 @@ public class UserInterface extends AOKPPreferenceFragment implements
     CheckBoxPreference mDisableBootAnimation;
     CheckBoxPreference mDisableBootAudio;
     CheckBoxPreference mRecentKillAll;
+    CheckBoxPreference mTabletMod;
 
     ListPreference mRecentAppSwitcher;
 
@@ -116,6 +119,10 @@ public class UserInterface extends AOKPPreferenceFragment implements
         mRecentKillAll = (CheckBoxPreference) findPreference(PREF_RECENT_KILL_ALL);
         mRecentKillAll.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.RECENT_KILL_ALL_BUTTON, 0) == 1);
+
+        mTabletMod = (CheckBoxPreference) findPreference(PREF_TABLET_MOD);
+        mTabletMod.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.TABLETMODE_ENABLED, 0) == 1);
 
         mLcdDensity = findPreference("lcd_density_setup");
         String currentProperty = SystemProperties.get("ro.sf.lcd_density");
@@ -244,6 +251,42 @@ public class UserInterface extends AOKPPreferenceFragment implements
                     Settings.System.RECENT_KILL_ALL_BUTTON, checked ? 1 : 0);
             Helpers.restartSystemUI();
             return true;
+
+        } else if (preference == mTabletMod){
+
+            final boolean checked = ((CheckBoxPreference) preference).isChecked();
+            new AlertDialog.Builder(getActivity())
+                        .setTitle("Tablet Mod")
+                        .setMessage("Reboot required for changes")
+                        .setCancelable(false)
+                        .setNeutralButton("Got it!", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Settings.System.putInt(getActivity().getContentResolver(),
+                                    Settings.System.TABLETMODE_ENABLED, checked ? 1 : 0);
+                                dialog.dismiss();
+                            }
+                        })
+                        .setPositiveButton("Reboot now", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Settings.System.putInt(getActivity().getContentResolver(),
+                                    Settings.System.TABLETMODE_ENABLED, checked ? 1 : 0);
+                                PowerManager pm = (PowerManager) getActivity()
+                                        .getSystemService(Context.POWER_SERVICE);
+                                pm.reboot("Resetting density");
+                            }
+                        })
+                        .setNegativeButton("Cancel",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                })
+                        .show();
 
         } else if (preference == mDisableBootAnimation) {
             boolean checked = ((CheckBoxPreference) preference).isChecked();
