@@ -153,14 +153,6 @@
 		<item>최근 사용한 앱 표시</item>
 	</string-array>
 
-        <string-array name="pref_lockscreen_options_entries">
-		<item>ICS 기본</item>
-		<item>4방향</item>
-		<item>8방향</item>
-		<item>클래식</item>
-		<item>허니컴</item>
-	</string-array>
-	
 	<string-array name="pref_lockscreen_calendar_interval_entries">
 		<item>1 초</item>
 		<item>1.5 초</item>
@@ -181,19 +173,6 @@
 		<item>1 주</item>
 	</string-array>
 	
-	<string-array name="battery_icon_entries">
-		<item>기본 아이콘</item>
-		<item>숫자와 %단위</item>
-		<item>아이콘과 숫자 표시</item>
-		<item>아이콘에 꼭 맞는 숫자</item>
-		<item>원형</item>
-		<item>껌 막대</item>
-		<item>허니컴</item>
-		<item>GenX</item>
-		<item>흑과 백</item>
-		<item>숨김</item>
-	</string-array>
-
 	<string-array name="battery_bar_entries">
 		<item>숨김</item>
 		<item>표시</item>
