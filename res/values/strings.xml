@@ -205,6 +205,8 @@
     <string name="lockscreen_wallpaper_not_set_sd">"Wallpaper did not set (is your SD mounted?)"</string>
     <string name="lockscreen_wallpaper_set_successfully">"Wallpaper set successfully"</string>
     <string name="lockscreen_wallpaper_not_set">"Wallpaper did not set (!!!)"</string>
+    <string name="lockscreen_vibrate_disabled_title">LockScreen Vibrate</string>
+    <string name="lockscreen_vibrate_disabled_summary">Vibrate On/Off</string>
 
     <!-- Power Menu -->
     <string name="title_show_power_saver">Show power saver</string>
