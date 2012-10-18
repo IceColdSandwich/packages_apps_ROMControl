@@ -43,6 +43,7 @@ public class UserInterface extends AOKPPreferenceFragment implements
     private static final String PREF_HOME_LONGPRESS = "long_press_home";
     private static final String PREF_RECENT_APP_SWITCHER = "recent_app_switcher";
     private static final String PREF_RECENT_KILL_ALL = "recent_kill_all";
+    private static final String PREF_SHOW_OVERFLOW = "show_overflow";
 
     CheckBoxPreference mCrtOnAnimation;
     CheckBoxPreference mCrtOffAnimation;
@@ -57,6 +58,7 @@ public class UserInterface extends AOKPPreferenceFragment implements
     CheckBoxPreference mDisableBootAnimation;
     CheckBoxPreference mDisableBootAudio;
     CheckBoxPreference mRecentKillAll;
+    CheckBoxPreference mShowActionOverflow;
 
     ListPreference mRecentAppSwitcher;
 
@@ -118,6 +120,11 @@ public class UserInterface extends AOKPPreferenceFragment implements
         mRecentKillAll = (CheckBoxPreference) findPreference(PREF_RECENT_KILL_ALL);
         mRecentKillAll.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.RECENT_KILL_ALL_BUTTON, 0) == 1);
+
+        mShowActionOverflow = (CheckBoxPreference) findPreference(PREF_SHOW_OVERFLOW);
+        mShowActionOverflow.setChecked((Settings.System.getInt(getActivity().
+                getApplicationContext().getContentResolver(),
+                Settings.System.UI_FORCE_OVERFLOW_BUTTON, 0) == 1));
 
         mLcdDensity = findPreference("lcd_density_setup");
         String currentProperty = SystemProperties.get("ro.sf.lcd_density");
@@ -248,6 +255,12 @@ public class UserInterface extends AOKPPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.RECENT_KILL_ALL_BUTTON, checked ? 1 : 0);
             Helpers.restartSystemUI();
+            return true;
+
+        } else if (preference == mShowActionOverflow) {
+            boolean enabled = mShowActionOverflow.isChecked();
+            Settings.System.putInt(getContentResolver(), Settings.System.UI_FORCE_OVERFLOW_BUTTON,
+                    enabled ? 1 : 0);
             return true;
 
         } else if (preference == mDisableBootAnimation) {
